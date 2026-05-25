@@ -1,0 +1,91 @@
+/* =================================================
+   KHỐI 1: CSS VARIABLES
+   ================================================= */
+:root {
+  --color-primary: #2563eb;
+  --color-secondary: #f97316;
+  --color-background: #f8fafc;
+  --color-border: #e2e8f0;
+  --color-text-main: #1e293b;
+  --color-text-sub: #64748b;
+  --color-footer: #0f172a;
+
+  --transition-speed: 0.3s;
+  --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* =================================================
+   KHỐI 2: CSS RESET
+   ================================================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block; /* Xóa gap trắng bên dưới ảnh do inline display */
+  max-width: 100%; /* Ảnh co lại theo container, không bao giờ tràn */
+}
+
+ul,
+ol {
+  list-style: none; /* Xóa bullet/số — navigation và card list cần cái này */
+}
+
+/* =================================================
+   KHỐI 3: BASE TYPOGRAPHY
+   ================================================= */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline; /* Báo hiệu rõ đây là link có thể click */
+}
+
+/* =================================================
+   KHỐI 4: INTERACTION STATES (Utility Classes)
+   ================================================= */
+.u-hover {
+  transition: filter var(--transition-speed) ease;
+  cursor: pointer;
+}
+.u-hover:hover {
+  filter: brightness(0.9);
+}
+
+.u-hover-card {
+  transition: all var(--transition-speed) ease;
+}
+.u-hover-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.u-active:active {
+  transform: scale(0.96);
+  transition: transform 0.1s ease;
+}
+
+.u-focus {
+  outline: none;
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-speed) ease;
+}
+.u-focus:focus {
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
