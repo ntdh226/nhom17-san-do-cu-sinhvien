@@ -10,7 +10,7 @@
 HTML5 Semantic, CSS Grid/Flexbox, JavaScript ES6
 
 ## Link demo
-https://[link-netlify-cua-may].netlify.app
+
 
 ## Cấu trúc thư mục
 san-do-cu-cntt/
