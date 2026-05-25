@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Danh Sách Sản Phẩm - Sàn Đồ Cũ Sinh Viên</title>
+
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/danh-sach.css">
+</head>
+
+<body>
+
+    <!-- HEADER: copy y chang từ index.html -->
+
+    <!-- NAVIGATION: copy y chang từ index.html -->
+
+    <div class="danh-sach-layout">
+
+        <aside class="filter-panel">
+
+            <h2 class="filter-panel__title">
+                Bộ lọc tìm kiếm
+            </h2>
+
+            <form class="filter-panel__form" id="filterForm">
+
+                <!-- Tìm kiếm -->
+                <div class="filter-panel__group">
+                    <label
+                        class="filter-panel__label"
+                        for="searchKeyword"
+                    >
+                        Tìm theo từ khóa
+                    </label>
+
+                    <input
+                        type="search"
+                        class="filter-panel__control"
+                        id="searchKeyword"
+                        placeholder="VD: iPhone, Dell, tai nghe..."
+                    >
+                </div>
+
+                <!-- Danh mục -->
+                <div class="filter-panel__group">
+                    <label
+                        class="filter-panel__label"
+                        for="filterCategory"
+                    >
+                        Danh mục
+                    </label>
+
+                    <select
+                        class="filter-panel__control"
+                        id="filterCategory"
+                    >
+                        <option value="">Tất cả danh mục</option>
+
+                        <option value="iphone">iPhone</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+
+                        <option value="dell">Dell</option>
+                        <option value="macbook">Macbook</option>
+                        <option value="asus">Asus</option>
+
+                        <option value="tai-nghe">Tai nghe</option>
+                        <option value="chuot-ban-phim">
+                            Chuột & Bàn phím
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Hãng -->
+                <div class="filter-panel__group">
+                    <label
+                        class="filter-panel__label"
+                        for="filterBrand"
+                    >
+                        Hãng sản xuất
+                    </label>
+
+                    <select
+                        class="filter-panel__control"
+                        id="filterBrand"
+                    >
+                        <option value="">Tất cả hãng</option>
+
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="dell">Dell</option>
+                        <option value="asus">Asus</option>
+                        <option value="sony">Sony</option>
+                        <option value="logitech">Logitech</option>
+                    </select>
+                </div>
+
+                <!-- Giá -->
+                <div class="filter-panel__group">
+
+                    <label class="filter-panel__label">
+                        Khoảng giá (VNĐ)
+                    </label>
+
+                    <div class="filter-panel__price-range">
+
+                        <input
+                            type="number"
+                            class="filter-panel__control"
+                            id="filterPriceMin"
+                            placeholder="Từ"
+                        >
+
+                        <span>—</span>
+
+                        <input
+                            type="number"
+                            class="filter-panel__control"
+                            id="filterPriceMax"
+                            placeholder="Đến"
+                        >
+
+                    </div>
+                </div>
+
+                <!-- Tình trạng -->
+                <div class="filter-panel__group">
+                    <label
+                        class="filter-panel__label"
+                        for="filterCondition"
+                    >
+                        Tình trạng
+                    </label>
+
+                    <select
+                        class="filter-panel__control"
+                        id="filterCondition"
+                    >
+                        <option value="all">Tất cả</option>
+
+                        <option value="likenew">
+                            Mới 99% (Like New)
+                        </option>
+
+                        <option value="used">
+                            Đã qua sử dụng
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Khu vực -->
+                <div class="filter-panel__group">
+                    <label
+                        class="filter-panel__label"
+                        for="filterLocation"
+                    >
+                        Khu vực
+                    </label>
+
+                    <select
+                        class="filter-panel__control"
+                        id="filterLocation"
+                    >
+                        <option value="">Tất cả khu vực</option>
+
+                        <option value="ktx">
+                            Ký túc xá
+                        </option>
+
+                        <option value="gan-truong">
+                            Gần trường
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Sắp xếp -->
+                <div class="filter-panel__group">
+                    <label
+                        class="filter-panel__label"
+                        for="filterSort"
+                    >
+                        Sắp xếp theo
+                    </label>
+
+                    <select
+                        class="filter-panel__control"
+                        id="filterSort"
+                    >
+                        <option value="newest">
+                            Mới đăng nhất
+                        </option>
+
+                        <option value="price-asc">
+                            Giá tăng dần
+                        </option>
+
+                        <option value="price-desc">
+                            Giá giảm dần
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Buttons -->
+                <button
+                    type="submit"
+                    class="filter-panel__btn-apply btn u-hover u-active"
+                >
+                    Áp dụng bộ lọc
+                </button>
+
+                <button
+                    type="reset"
+                    class="filter-panel__btn-reset btn u-hover"
+                    id="btnReset"
+                >
+                    Xóa bộ lọc
+                </button>
+
+            </form>
+
+        </aside>
+
+        <!-- Danh sách sản phẩm -->
+        <main class="product-showroom">
+
+            <p
+                class="result-count"
+                id="resultCount"
+            >
+            </p>
+
+            <div
+                class="product-showroom__grid"
+                id="productGrid"
+            >
+                <!-- TODO [Tường Vy]:
+                     JS render sản phẩm vào đây -->
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- FOOTER: copy y chang từ index.html -->
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/danh-sach.js"></script>
+
+</body>
+</html>
