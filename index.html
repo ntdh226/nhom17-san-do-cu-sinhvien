@@ -4,19 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sàn Giao Dịch Đồ Điện Tử Cũ Sinh Viên - Trang Chủ</title>
+    <meta
+      name="description"
+      content="Sàn giao dịch đồ điện tử cũ sinh viên - Mua bán điện thoại, laptop, phụ kiện cũ giá rẻ an toàn cho sinh viên"
+    />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <!-- ===================== HEADER ===================== -->
     <header class="header">
-      <div class="header__logo">
-        <img
-          src="assets/images/logo.png"
-          alt="Sàn giao dịch đồ điện tử cũ sinh viên"
-          class="header__logo-img"
-        />
-      </div>
+      <h1 class="header__logo">
+        <a href="index.html" title="Về trang chủ">
+          <img
+            src="assets/images/logo.png"
+            alt="Sàn giao dịch đồ điện tử cũ sinh viên"
+            class="header__logo-img"
+          />
+        </a>
+      </h1>
 
       <div class="header__search">
         <form class="header__search-form" role="search">
@@ -56,10 +62,6 @@
 
     <!-- ===================== NAVIGATION ===================== -->
     <nav class="navigation" aria-label="Danh mục thiết bị công nghệ">
-      <!-- TODO [Lan Hương]: Style thanh navigation này trong base.css.
-             - ul.navigation__list--level-2 mặc định phải ẩn (dùng opacity:0 hoặc display:none)
-             - Khi hover vào li.navigation__item--has-dropdown thì level-2 hiện ra
-             - Thêm transition mượt để dropdown trượt xuống, không bật ra đột ngột -->
       <ul class="navigation__list navigation__list--level-1">
         <li class="navigation__item navigation__item--has-dropdown">
           <a href="pages/danh-sach.html" class="navigation__link">Điện thoại</a>
@@ -132,8 +134,6 @@
       class="hero-slideshow"
       aria-label="Băng chuyền tin nổi bật và ưu đãi sinh viên"
     >
-      <!-- TODO [Lan Hương]: Thêm đủ 3 banner vào đây, mỗi banner là 1 div.hero-slideshow__item.
-             Thêm nút prev/next và dot indicator bên dưới. -->
       <div class="hero-slideshow__wrapper">
         <div class="hero-slideshow__item">
           <img
@@ -148,8 +148,6 @@
     <!-- ===================== MAIN LAYOUT ===================== -->
     <main class="main-layout">
       <aside class="category-sidebar">
-        <!-- TODO [Lan Hương]: Style sidebar này nằm bên trái main-layout bằng CSS Grid.
-                 Thêm icon trước mỗi link danh mục cho sinh động. -->
         <h2 class="category-sidebar__title">Tìm theo phân loại</h2>
         <ul class="category-sidebar__list">
           <li class="category-sidebar__item">
@@ -177,7 +175,6 @@
       </aside>
 
       <section class="product-showroom">
-        <!-- TODO [Tường Vy]: Render tự động bởi renderProducts() trong main.js -->
         <h2 class="product-showroom__title">Tin đăng mới nhất từ sinh viên</h2>
         <div class="product-showroom__grid" id="productGrid">
           <!-- Sản phẩm được render tự động bởi renderProducts() trong main.js -->
@@ -185,11 +182,6 @@
       </section>
 
       <section class="advanced-filter">
-        <!-- TODO [Tường Vy]: Xử lý logic lọc sản phẩm trong danh-sach.js.
-                 - Lắng nghe sự kiện submit trên #filterForm, dùng preventDefault() để trang không reload
-                 - Đọc giá trị từ #filterPrice và #filterStatus
-                 - Lọc mảng products trong data.js theo 2 tiêu chí trên
-                 - Gọi hàm renderProducts() để vẽ lại product-showroom__grid với kết quả đã lọc -->
         <h2 class="advanced-filter__title">Bộ lọc nâng cao</h2>
         <form class="advanced-filter__form" id="filterForm">
           <div class="advanced-filter__group">
@@ -222,8 +214,6 @@
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="main-footer">
-      <!-- TODO [Lan Hương]: Chia footer thành 3 cột bằng CSS Grid:
-             cột 1 thông tin nhóm, cột 2 link nhanh, cột 3 liên hệ. -->
       <div class="main-footer__content">
         <div class="main-footer__info">
           <h3>Sàn Đồ Điện Tử Cũ Sinh Viên - Nhóm 17</h3>
