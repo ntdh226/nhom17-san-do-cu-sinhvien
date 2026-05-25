@@ -89,6 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    console.log("✅ [danh-sach.js] Loaded: Bộ lọc nâng cao sẵn sàng.");
+    console.log("✅ [danh_sach.js] Loaded: Bộ lọc nâng cao sẵn sàng.");
 
 });
