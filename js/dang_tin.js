@@ -131,5 +131,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // Gọi lần đầu để hiện giá trị mặc định
   updatePreview();
 
+  // Preview ảnh khi người dùng chọn file
+const imageInput = document.getElementById('image');
+const imgPlaceholder = document.querySelector('.preview-card__img-placeholder');
+
+if (imageInput && imgPlaceholder) {
+    imageInput.addEventListener('change', () => {
+        const file = imageInput.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                imgPlaceholder.innerHTML = `
+                    <img src="${e.target.result}" 
+                         alt="Preview" 
+                         style="width:100%; height:100%; object-fit:cover;">
+                `;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+}
+
   console.log("✅ [dang_tin.js] Loaded: Validate form sẵn sàng.");
 });
