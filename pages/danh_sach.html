@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh Sách Sản Phẩm - Sàn Đồ Cũ Sinh Viên</title>
+    <meta
+      name="description"
+      content="Sàn giao dịch đồ điện tử cũ sinh viên - Mua bán điện thoại, laptop, phụ kiện cũ giá rẻ an toàn cho sinh viên"
+    />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/danh_sach.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="../index.html" title="Về trang chủ">
+          <img
+            src="../assets/images/logo.png"
+            alt="Sàn giao dịch đồ điện tử cũ sinh viên"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
+
+      <div class="header__search">
+        <form class="header__search-form" role="search">
+          <input
+            type="search"
+            class="header__search-input u-focus"
+            placeholder="Tìm điện thoại, laptop, phụ kiện cũ..."
+          />
+          <button
+            type="submit"
+            class="header__search-btn u-hover"
+            aria-label="Tìm kiếm nhanh"
+          >
+            🔍
+          </button>
+        </form>
+      </div>
+
+      <div class="header__actions">
+        <a href="#" class="header__action-link u-hover">Đăng ký / Đăng nhập</a>
+        <a
+          href="#"
+          class="header__cart-icon u-hover"
+          aria-label="Xem giỏ hàng cá nhân"
+          >🛒</a
+        >
+      </div>
+
+      <div class="header__cta">
+        <a
+          href="dang_tin.html"
+          class="header__btn-post btn btn-secondary u-hover u-active"
+          >Đăng tin miễn phí</a
+        >
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation" aria-label="Danh mục thiết bị công nghệ">
+      <ul class="navigation__list navigation__list--level-1">
+        <li class="navigation__item navigation__item--has-dropdown">
+          <a href="danh_sach.html" class="navigation__link">Điện thoại</a>
+          <ul class="navigation__list navigation__list--level-2">
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=iphone" class="navigation__link"
+                >iPhone</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=samsung" class="navigation__link"
+                >Samsung</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=xiaomi" class="navigation__link"
+                >Xiaomi</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item navigation__item--has-dropdown">
+          <a href="danh_sach.html" class="navigation__link">Laptop</a>
+          <ul class="navigation__list navigation__list--level-2">
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=dell" class="navigation__link"
+                >Dell</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=macbook" class="navigation__link"
+                >Macbook</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=asus" class="navigation__link"
+                >Asus</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item navigation__item--has-dropdown">
+          <a href="danh_sach.html" class="navigation__link">Phụ kiện</a>
+          <ul class="navigation__list navigation__list--level-2">
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=tai_nghe" class="navigation__link"
+                >Tai nghe</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                href="danh_sach.html?cat=chuot_ban_phim"
+                class="navigation__link"
+                >Chuột & Bàn phím</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="danh-sach-layout">
+      <aside class="filter-panel">
+        <h2 class="filter-panel__title">Bộ lọc tìm kiếm</h2>
+        <form class="filter-panel__form" id="filterForm">
+          <div class="filter-panel__group">
+            <label class="filter-panel__label" for="searchKeyword"
+              >Tìm theo từ khóa</label
+            >
+            <input
+              type="search"
+              class="filter-panel__control"
+              id="searchKeyword"
+              placeholder="VD: iPhone, Dell, tai nghe..."
+            />
+          </div>
+
+          <div class="filter-panel__group">
+            <label class="filter-panel__label" for="filterCategory"
+              >Danh mục</label
+            >
+            <select class="filter-panel__control" id="filterCategory">
+              <option value="">Tất cả danh mục</option>
+              <option value="iphone">iPhone</option>
+              <option value="samsung">Samsung</option>
+              <option value="xiaomi">Xiaomi</option>
+              <option value="dell">Dell</option>
+              <option value="macbook">Macbook</option>
+              <option value="asus">Asus</option>
+              <option value="tai-nghe">Tai nghe</option>
+              <option value="chuot-ban-phim">Chuột & Bàn phím</option>
+            </select>
+          </div>
+
+          <div class="filter-panel__group">
+            <label class="filter-panel__label" for="filterBrand"
+              >Hãng sản xuất</label
+            >
+            <select class="filter-panel__control" id="filterBrand">
+              <option value="">Tất cả hãng</option>
+              <option value="apple">Apple</option>
+              <option value="samsung">Samsung</option>
+              <option value="dell">Dell</option>
+              <option value="asus">Asus</option>
+              <option value="sony">Sony</option>
+              <option value="logitech">Logitech</option>
+            </select>
+          </div>
+
+          <div class="filter-panel__group">
+            <label class="filter-panel__label">Khoảng giá (VNĐ)</label>
+            <div class="filter-panel__price-range">
+              <input
+                type="number"
+                class="filter-panel__control"
+                id="filterPriceMin"
+                placeholder="Từ"
+              />
+              <span>—</span>
+              <input
+                type="number"
+                class="filter-panel__control"
+                id="filterPriceMax"
+                placeholder="Đến"
+              />
+            </div>
+          </div>
+
+          <div class="filter-panel__group">
+            <label class="filter-panel__label" for="filterCondition"
+              >Tình trạng</label
+            >
+            <select class="filter-panel__control" id="filterCondition">
+              <option value="all">Tất cả</option>
+              <option value="likenew">Mới 99% (Like New)</option>
+              <option value="used">Đã qua sử dụng</option>
+            </select>
+          </div>
+
+          <div class="filter-panel__group">
+            <label class="filter-panel__label" for="filterLocation"
+              >Khu vực</label
+            >
+            <select class="filter-panel__control" id="filterLocation">
+              <option value="">Tất cả khu vực</option>
+              <option value="ktx">Ký túc xá</option>
+              <option value="gan-truong">Gần trường</option>
+            </select>
+          </div>
+
+          <div class="filter-panel__group">
+            <label class="filter-panel__label" for="filterSort"
+              >Sắp xếp theo</label
+            >
+            <select class="filter-panel__control" id="filterSort">
+              <option value="newest">Mới đăng nhất</option>
+              <option value="price-asc">Giá tăng dần</option>
+              <option value="price-desc">Giá giảm dần</option>
+            </select>
+          </div>
+
+          <button
+            type="submit"
+            class="filter-panel__btn-apply btn u-hover u-active"
+          >
+            Áp dụng bộ lọc
+          </button>
+          <button
+            type="reset"
+            class="filter-panel__btn-reset btn u-hover"
+            id="btnReset"
+          >
+            Xóa bộ lọc
+          </button>
+        </form>
+      </aside>
+
+      <main class="product-showroom">
+        <p class="result-count" id="resultCount"></p>
+        <div class="product-showroom__grid" id="productGrid">
+          <!-- TODO [Tường Vy]: JS render sản phẩm vào đây -->
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="main-footer__content">
+        <div class="main-footer__info">
+          <h3>Sàn Đồ Điện Tử Cũ Sinh Viên - Nhóm 17</h3>
+          <p>
+            Kênh trung gian kết nối trao đổi thiết bị công nghệ an toàn trong
+            khuôn viên trường đại học.
+          </p>
+        </div>
+        <div class="main-footer__links">
+          <a href="#" class="main-footer__link u-hover"
+            >Quy định chung & Hướng dẫn giao dịch an toàn</a
+          >
+        </div>
+      </div>
+      <div class="main-footer__copyright">
+        <p>
+          &copy; 2026 Sàn Đồ Cũ CNTT. Đồ án Thiết kế và Lập trình Web cơ bản.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/danh_sach.js"></script>
+  </body>
+</html>
