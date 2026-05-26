@@ -177,7 +177,19 @@ document.addEventListener("DOMContentLoaded", () => {
             block: "start",
           });
         }
-      });
+     // Xử lý thanh search header
+document.addEventListener('DOMContentLoaded', () => {
+    const searchForm = document.querySelector('.header__search-form');
+    if (searchForm) {
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const keyword = document.querySelector('.header__search-input').value.trim();
+            if (keyword) {
+                // Chuyển sang trang danh sách với từ khóa tìm kiếm
+                const isSubPage = window.location.pathname.includes('/pages/');
+                const prefix = isSubPage ? '' : 'pages/';
+                window.location.href = `${prefix}danh_sach.html?search=${encodeURIComponent(keyword)}`;
+            }
+        });
     }
-  }
 });
