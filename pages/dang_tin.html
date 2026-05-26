@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Đăng tin bán đồ điện tử cũ miễn phí - Sàn giao dịch sinh viên"
+    />
+    <title>Đăng Tin - Sàn Đồ Cũ Sinh Viên</title>
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/dang_tin.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo">
+        <a href="../index.html" title="Về trang chủ">
+          <img
+            src="../assets/images/logo.png"
+            alt="Sàn giao dịch đồ điện tử cũ sinh viên"
+            class="header__logo-img"
+          />
+        </a>
+      </div>
+
+      <div class="header__search">
+        <form class="header__search-form" role="search">
+          <input
+            type="search"
+            class="header__search-input u-focus"
+            placeholder="Tìm điện thoại, laptop, phụ kiện cũ..."
+          />
+          <button
+            type="submit"
+            class="header__search-btn u-hover"
+            aria-label="Tìm kiếm nhanh"
+          >
+            🔍
+          </button>
+        </form>
+      </div>
+
+      <div class="header__actions">
+        <a href="#" class="header__action-link u-hover">Đăng ký / Đăng nhập</a>
+        <a
+          href="#"
+          class="header__cart-icon u-hover"
+          aria-label="Xem giỏ hàng cá nhân"
+          >🛒</a
+        >
+      </div>
+
+      <div class="header__cta">
+        <a
+          href="dang_tin.html"
+          class="header__btn-post btn btn-secondary u-hover u-active"
+          >Đăng tin miễn phí</a
+        >
+      </div>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation" aria-label="Danh mục thiết bị công nghệ">
+      <ul class="navigation__list navigation__list--level-1">
+        <li class="navigation__item navigation__item--has-dropdown">
+          <a href="danh_sach.html" class="navigation__link">Điện thoại</a>
+          <ul class="navigation__list navigation__list--level-2">
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=iphone" class="navigation__link"
+                >iPhone</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=samsung" class="navigation__link"
+                >Samsung</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=xiaomi" class="navigation__link"
+                >Xiaomi</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item navigation__item--has-dropdown">
+          <a href="danh_sach.html" class="navigation__link">Laptop</a>
+          <ul class="navigation__list navigation__list--level-2">
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=dell" class="navigation__link"
+                >Dell</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=macbook" class="navigation__link"
+                >Macbook</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=asus" class="navigation__link"
+                >Asus</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item navigation__item--has-dropdown">
+          <a href="danh_sach.html" class="navigation__link">Phụ kiện</a>
+          <ul class="navigation__list navigation__list--level-2">
+            <li class="navigation__item">
+              <a href="danh_sach.html?cat=tai_nghe" class="navigation__link"
+                >Tai nghe</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a
+                href="danh_sach.html?cat=chuot_ban_phim"
+                class="navigation__link"
+                >Chuột & Bàn phím</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="dang-tin-layout">
+      <!-- CỘT TRÁI: Form đăng tin -->
+      <section class="dang-tin-form">
+        <h1 class="dang-tin-form__title">Đăng tin miễn phí</h1>
+
+        <form id="dangTinForm" class="dang-tin-form__form">
+          <div class="form-group">
+            <label class="form-label" for="title">Tiêu đề tin đăng *</label>
+            <input
+              type="text"
+              class="form-control u-focus"
+              id="title"
+              placeholder="VD: iPhone 13 Pro Max 128GB còn bảo hành"
+            />
+            <span class="form-error" id="title-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="category">Danh mục *</label>
+            <select class="form-control u-focus" id="category">
+              <option value="">-- Chọn danh mục --</option>
+              <option value="iphone">iPhone</option>
+              <option value="samsung">Samsung</option>
+              <option value="xiaomi">Xiaomi</option>
+              <option value="dell">Dell</option>
+              <option value="macbook">Macbook</option>
+              <option value="asus">Asus</option>
+              <option value="tai-nghe">Tai nghe</option>
+              <option value="chuot-ban-phim">Chuột & Bàn phím</option>
+            </select>
+            <span class="form-error" id="category-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="brand">Hãng sản xuất *</label>
+            <select class="form-control u-focus" id="brand">
+              <option value="">-- Chọn hãng --</option>
+              <option value="apple">Apple</option>
+              <option value="samsung">Samsung</option>
+              <option value="dell">Dell</option>
+              <option value="asus">Asus</option>
+              <option value="sony">Sony</option>
+              <option value="logitech">Logitech</option>
+              <option value="other">Khác</option>
+            </select>
+            <span class="form-error" id="brand-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Tình trạng thiết bị *</label>
+            <div class="form-radio-group">
+              <label class="form-radio-label">
+                <input type="radio" name="condition" value="likenew" />
+                Mới 99% (Like New)
+              </label>
+              <label class="form-radio-label">
+                <input type="radio" name="condition" value="used" />
+                Đã qua sử dụng
+              </label>
+            </div>
+            <span class="form-error" id="condition-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="price">Giá bán (VNĐ) *</label>
+            <input
+              type="number"
+              class="form-control u-focus"
+              id="price"
+              placeholder="VD: 4500000"
+            />
+            <span class="form-error" id="price-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="location">Khu vực *</label>
+            <select class="form-control u-focus" id="location">
+              <option value="">-- Chọn khu vực --</option>
+              <option value="ktx">Ký túc xá</option>
+              <option value="gan-truong">Gần trường</option>
+              <option value="other">Khác</option>
+            </select>
+            <span class="form-error" id="location-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="description">Mô tả chi tiết *</label>
+            <textarea
+              class="form-control u-focus"
+              id="description"
+              rows="5"
+              placeholder="Mô tả tình trạng, phụ kiện đi kèm, lý do bán..."
+            ></textarea>
+            <span class="form-error" id="description-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="image">Ảnh sản phẩm</label>
+            <input
+              type="file"
+              class="form-control"
+              id="image"
+              accept="image/*"
+              multiple
+            />
+          </div>
+
+          <button type="submit" class="btn-submit u-hover u-active">
+            Đăng tin ngay
+          </button>
+        </form>
+      </section>
+
+      <!-- CỘT PHẢI: Preview sản phẩm -->
+      <aside class="dang-tin-preview">
+        <h2 class="dang-tin-preview__title">Xem trước tin đăng</h2>
+        <div class="preview-card product-card">
+          <div class="preview-card__img-placeholder">📷</div>
+          <div class="product-card__content">
+            <h3 class="product-card__title" id="preview-title">Tên sản phẩm</h3>
+            <p class="product-price" id="preview-price">0 đ</p>
+            <p class="product-meta" id="preview-desc">Mô tả sản phẩm...</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+      <div class="main-footer__content">
+        <div class="main-footer__info">
+          <h3>Sàn Đồ Điện Tử Cũ Sinh Viên - Nhóm 17</h3>
+          <p>
+            Kênh trung gian kết nối trao đổi thiết bị công nghệ an toàn trong
+            khuôn viên trường đại học.
+          </p>
+        </div>
+        <div class="main-footer__links">
+          <a href="#" class="main-footer__link u-hover"
+            >Quy định chung & Hướng dẫn giao dịch an toàn</a
+          >
+        </div>
+      </div>
+      <div class="main-footer__copyright">
+        <p>
+          &copy; 2026 Sàn Đồ Cũ CNTT. Đồ án Thiết kế và Lập trình Web cơ bản.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dang_tin.js"></script>
+  </body>
+</html>
