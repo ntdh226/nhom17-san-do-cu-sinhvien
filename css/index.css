@@ -11,6 +11,14 @@
   border-bottom: 1px solid var(--color-border);
 }
 
+.header__logo-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
 .header__logo {
   flex-shrink: 0;
 }
@@ -129,6 +137,38 @@
   transform: translateY(0);
 }
 
+.hero-banner {
+    background: linear-gradient(135deg, var(--color-primary), #1d4ed8);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.hero-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-banner p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.hero-banner__btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hero-banner__btn:hover {
+    filter: brightness(0.9);
+    text-decoration: none;
+}
 /* ==========================================================================
    KHỐI 3: MAIN LAYOUT (CSS Grid 3 Cột)
    ========================================================================== */
