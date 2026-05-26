@@ -92,3 +92,5 @@ const products = [
 ];
 
 console.log("✅ [data.js] Loaded:", products.length, "sản phẩm mẫu.");
+// Thay toàn bộ image URL thêm &auto=format&fit=crop
+image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=400&q=80&auto=format&fit=crop"
