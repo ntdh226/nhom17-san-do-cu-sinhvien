@@ -94,13 +94,13 @@ document.addEventListener("DOMContentLoaded", () => {
         isDescription;
 
       if (allValid) {
-        alert("✅ Đăng tin thành công! Tin của bạn đang chờ duyệt.");
-        dangTinForm.reset();
-        // Xóa tất cả thông báo lỗi còn sót
-        document.querySelectorAll(".form-error").forEach((el) => {
-          el.textContent = "";
-        });
-      }
+    alert('✅ Đăng tin thành công! Tin của bạn đang chờ duyệt.');
+    dangTinForm.reset();
+    document.querySelectorAll('.form-error').forEach((el) => {
+        el.textContent = '';
+    });
+    updatePreview(); // Reset preview về mặc định
+}
     });
   }
 
