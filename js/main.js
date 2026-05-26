@@ -60,7 +60,7 @@ function renderProducts(productList, containerId) {
       return `
             <article class="product-card u-hover-card">
                 <a href="${detailUrl}" class="product-card__image-link">
-                    <img src="${imageUrl}" alt="${product.title}" class="product-card__img">
+                    <img src="${imageUrl}" alt="${product.title}" class="product-card__img product-card__image">
                 </a>
                 <div class="product-card__content">
                     <h3 class="product-card__title">
