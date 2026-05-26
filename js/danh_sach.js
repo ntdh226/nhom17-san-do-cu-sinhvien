@@ -12,8 +12,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // BƯỚC 2: Render mặc định khi vào trang
   const catFromUrl = getUrlParam("cat");
+  // Thêm vào sau dòng const catFromUrl = getUrlParam('cat');
+const searchFromUrl = getUrlParam('search');
 
-  if (catFromUrl) {
+if (searchFromUrl) {
+    const searchInput = document.getElementById('searchKeyword');
+    if (searchInput) searchInput.value = searchFromUrl;
+    const filtered = products.filter(p =>
+        p.title.toLowerCase().includes(searchFromUrl.toLowerCase())
+    );
+    renderWithCount(filtered);
+} else if (catFromUrl) {
     const filterCategory = document.getElementById("filterCategory");
     if (filterCategory) {
       filterCategory.value = catFromUrl;
