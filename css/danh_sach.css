@@ -250,6 +250,18 @@
   margin-top: 0.25rem;
 }
 
+/* Fix navigation dropdown */
+.navigation__list--level-2 .navigation__link {
+    padding: 0.75rem 1.5rem;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navigation__list--level-2 .navigation__item:last-child .navigation__link {
+    border-bottom: none;
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
