@@ -8,8 +8,7 @@ const products = [
     condition: "likenew",
     location: "Ký túc xá ĐH Tây Nguyên",
     locationKey: "ktx",
-    image:
-      "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=400&q=80",
+    image: "assets/images/sp-001.jpg",
     description:
       "Máy còn bảo hành Apple Care 3 tháng. Pin 95%, không một vết xước. Tặng kèm ốp lưng xịn.",
     postedAt: "2026-05-25",
@@ -23,8 +22,7 @@ const products = [
     condition: "used",
     location: "Ea Kao, Đắk Lắk",
     locationKey: "gan-truong",
-    image:
-      "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&q=80",
+    image: "assets/images/sp-002.jpg",
     description:
       "RAM 8GB, SSD 512GB. Bàn phím êm, màn đẹp không điểm chết. Pin hơi chai nhẹ.",
     postedAt: "2026-05-24",
@@ -38,8 +36,7 @@ const products = [
     condition: "likenew",
     location: "Trường Đại học Tây Nguyên",
     locationKey: "gan-truong",
-    image:
-      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80",
+    image: "assets/images/sp-003.jpg",
     description:
       "Tai nghe chống ồn chủ động, học bài ở thư viện cực tập trung. Mới mua 1 tháng.",
     postedAt: "2026-05-23",
@@ -53,8 +50,7 @@ const products = [
     condition: "used",
     location: "Khu vực cổng trường ĐHTN",
     locationKey: "gan-truong",
-    image:
-      "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=400&q=80",
+    image: "assets/images/sp-004.jpg",
     description:
       "Bút S-Pen nhạy, camera zoom 100x chụp tài liệu trên bảng cực nét. Xước dăm nhẹ ở viền.",
     postedAt: "2026-05-22",
@@ -68,8 +64,7 @@ const products = [
     condition: "likenew",
     location: "Ea Kao, Đắk Lắk",
     locationKey: "gan-truong",
-    image:
-      "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80",
+    image: "assets/images/sp-005.jpg",
     description:
       "Gọn nhẹ cho sinh viên, pin trâu xài cả ngày không cần sạc. Ngoại hình đẹp keng.",
     postedAt: "2026-05-21",
@@ -83,8 +78,7 @@ const products = [
     condition: "used",
     location: "Ký túc xá ĐH Tây Nguyên",
     locationKey: "ktx",
-    image:
-      "https://images.unsplash.com/photo-1541140532154-b024d705b90a?w=400&q=80",
+    image: "assets/images/sp-006.jpg",
     description:
       "Blue Switch gõ đã tay, LED RGB đồng bộ. Keycap mờ nhẹ phím WASD, còn lại hoàn hảo.",
     postedAt: "2026-05-20",
@@ -93,4 +87,4 @@ const products = [
 
 console.log("✅ [data.js] Loaded:", products.length, "sản phẩm mẫu.");
 // Thay toàn bộ image URL thêm &auto=format&fit=crop
-image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=400&q=80&auto=format&fit=crop"
+image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=400&q=80&auto=format&fit=crop";
