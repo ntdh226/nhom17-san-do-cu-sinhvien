@@ -27,13 +27,13 @@
 }
 
 img {
-  display: block; /* Xóa gap trắng bên dưới ảnh do inline display */
-  max-width: 100%; /* Ảnh co lại theo container, không bao giờ tràn */
+  display: block;
+  max-width: 100%;
 }
 
 ul,
 ol {
-  list-style: none; /* Xóa bullet/số — navigation và card list cần cái này */
+  list-style: none;
 }
 
 /* =================================================
@@ -53,7 +53,7 @@ a {
 }
 
 a:hover {
-  text-decoration: underline; /* Báo hiệu rõ đây là link có thể click */
+  text-decoration: underline;
 }
 
 /* =================================================
