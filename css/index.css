@@ -1,17 +1,17 @@
-/* ==========================================================================
-   KHỐI 1: HEADER LAYOUT
-   ========================================================================== */
+/* KHỐI 1: HEADER */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 1rem 2rem; 
+  padding: 1rem 2rem;
   background-color: var(--color-background);
   border-bottom: 1px solid var(--color-border);
 }
 
-.header__logo {
+/* Gộp 2 element cùng chỉ có flex-shrink: 0 */
+.header__logo,
+.header__cta {
   flex-shrink: 0;
 }
 
@@ -21,12 +21,6 @@
   color: var(--color-primary);
   text-decoration: none;
   white-space: nowrap;
-}
-
-.header__logo-img {
-  height: 40px;
-  width: auto;
-  display: block;
 }
 
 .header__search {
@@ -65,25 +59,27 @@
   flex-shrink: 0;
 }
 
-.header__cta {
-  flex-shrink: 0;
+.header__action-link,
+.header__btn-post {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  color: white !important;
+  text-decoration: none;
+  transition: filter var(--transition-speed) ease;
 }
 
 .header__action-link {
   background-color: var(--color-primary);
-  color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: filter var(--transition-speed) ease;
 }
 
 .header__action-link:hover {
-  filter: brightness(0.9);
   text-decoration: none;
 }
 
+/* position: relative gộp vào đây (trước bị khai báo lần 2 ở KHỐI 9) */
 .header__cart-icon {
+  position: relative;
   background-color: var(--color-background);
   border: 1px solid var(--color-border);
   padding: 0.4rem 0.6rem;
@@ -97,9 +93,16 @@
   background-color: white;
 }
 
-/* ==========================================================================
-   KHỐI 2: NAVIGATION LAYOUT (Menu 2 cấp)
-   ========================================================================== */
+.header__btn-post {
+  background-color: var(--color-secondary);
+}
+
+.header__btn-post:hover {
+  filter: brightness(0.9);
+  text-decoration: none;
+}
+
+/* KHỐI 2: NAVIGATION (Menu 2 cấp) */
 .navigation {
   background-color: var(--color-primary);
 }
@@ -134,7 +137,6 @@
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-hover);
   z-index: 100;
-
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -156,8 +158,13 @@
 }
 
 .navigation__list--level-2 .navigation__link:hover {
-  background-color: var(--color-background);
+  background-color: #eef2ff;
   color: var(--color-primary);
+}
+
+.navigation__item:last-child .navigation__list--level-2 {
+  left: auto;
+  right: 0;
 }
 
 .navigation__item--has-dropdown:hover .navigation__list--level-2 {
@@ -167,9 +174,7 @@
   transform: translateY(0);
 }
 
-/* ==========================================================================
-   KHỐI 3: HERO BANNER
-   ========================================================================== */
+/* KHỐI 3: HERO BANNER */
 .hero-banner {
   background: linear-gradient(135deg, var(--color-primary), #1d4ed8);
   color: white;
@@ -229,9 +234,7 @@
   opacity: 0.85;
 }
 
-/* ==========================================================================
-   KHỐI 4: MAIN LAYOUT (1 Cột)
-   ========================================================================== */
+/* KHỐI 4: MAIN LAYOUT & PRODUCT SHOWROOM */
 .main-layout {
   padding: 2rem;
   max-width: 1440px;
@@ -250,9 +253,19 @@
   gap: 1.5rem;
 }
 
-/* ==========================================================================
-   KHỐI 5: PRODUCT CARD
-   ========================================================================== */
+.product-showroom__empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-sub);
+}
+
+.product-showroom__empty-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* KHỐI 5: PRODUCT CARD */
 .product-card {
   display: flex;
   flex-direction: column;
@@ -300,43 +313,70 @@
   text-decoration: none;
 }
 
+.product-price,
+.product-meta {
+  margin: 0;
+}
+
 .product-price {
   font-size: 1.25rem;
   font-weight: bold;
   color: var(--color-primary);
-  margin: 0;
 }
 
 .product-meta {
   font-size: 0.875rem;
   color: var(--color-text-sub);
-  margin: 0;
 }
 
-.product-showroom__empty {
-  grid-column: 1 / -1;
-  text-align: center;
-  padding: 3rem 1rem;
-  color: var(--color-text-sub);
+.product-card__footer {
+  padding: 0 1rem 1rem;
+  margin-top: auto;
 }
 
-.product-showroom__empty-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-
-/* ==========================================================================
-   KHỐI 7: SHARED FORM & BUTTON COMPONENTS
-   ========================================================================== */
-.form-control {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  font-size: 1rem;
+.btn-add-cart {
   width: 100%;
+  padding: 0.55rem 0;
+  background-color: white;
+  color: var(--color-primary);
+  border: 1.5px solid var(--color-primary);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
 }
 
+.btn-add-cart:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-add-cart.added {
+  background-color: #16a34a;
+  border-color: #16a34a;
+  color: white;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+/* KHỐI 6: BUTTONS */
 .btn {
   padding: 0.6rem 1.25rem;
   border-radius: 4px;
@@ -346,19 +386,175 @@
   border: none;
 }
 
-.btn-primary {
+/* Gộp chung property giống nhau của 2 nút primary */
+.filter-bar__toggle,
+.filter-panel__btn-apply {
   background-color: var(--color-primary);
   color: white;
-  width: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.btn-primary:hover {
+.filter-bar__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  transition: filter var(--transition-speed) ease;
+}
+
+.filter-bar__toggle:hover {
   filter: brightness(0.9);
 }
 
-/* ==========================================================================
-   RESPONSIVE TRANG CHỦ
-   ========================================================================== */
+.filter-bar__toggle-icon {
+  display: inline-block;
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.filter-bar__toggle.is-open .filter-bar__toggle-icon {
+  transform: rotate(180deg);
+}
+
+.filter-panel__btn-apply {
+  padding: 0.6rem 1.5rem;
+}
+
+/* .filter-panel__btn-apply:hover đã có .u-hover trong HTML — không cần định nghĩa thêm */
+
+.filter-panel__btn-reset {
+  padding: 0.6rem 1.25rem;
+  background-color: white;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+}
+
+.filter-panel__btn-reset:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* KHỐI 7: FILTER BAR & PANEL */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: 8px 8px 0 0;
+  border-bottom: none;
+  margin-top: 1.5rem;
+}
+
+.filter-bar__sort {
+  width: auto;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.result-count {
+  flex: 1;
+  font-size: 0.875rem;
+  color: var(--color-text-sub);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.filter-panel {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.filter-panel.is-open {
+  max-height: 400px;
+}
+
+.filter-panel__form {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.filter-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.filter-panel__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.filter-panel__label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--color-text-sub);
+}
+
+.filter-panel__control {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  width: 100%;
+  background-color: white;
+  color: var(--color-text-main);
+}
+
+.filter-panel__control:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: var(--focus-ring);
+}
+
+.filter-panel__price-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-panel__price-range .filter-panel__control {
+  flex: 1;
+}
+
+.filter-panel__price-range span {
+  color: var(--color-text-sub);
+  flex-shrink: 0;
+}
+
+.filter-panel__actions {
+  display: flex;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .filter-panel__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     flex-wrap: wrap;
@@ -398,6 +594,19 @@
   .hero-banner__stat strong {
     font-size: 1.25rem;
   }
+
+  .filter-bar {
+    flex-wrap: wrap;
+  }
+
+  .filter-bar__sort {
+    width: 100%;
+    order: 3;
+  }
+
+  .filter-panel__grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 480px) {
@@ -425,264 +634,8 @@
   .product-price {
     font-size: 1rem;
   }
-}
 
-/* ==========================================================================
-   KHỐI 8: FILTER BAR (Component dùng chung cho tất cả trang)
-   ========================================================================== */
-.filter-bar {
-  background-color: white;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-
-.filter-bar__toggle {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  padding: 0.875rem 1.25rem;
-  background: none;
-  border: none;
-  font-size: 0.95rem;
-  font-weight: bold;
-  color: var(--color-text-main);
-  cursor: pointer;
-  text-align: left;
-  transition: background-color var(--transition-speed) ease;
-}
-
-.filter-bar__toggle:hover {
-  background-color: var(--color-background);
-}
-
-.filter-bar__arrow {
-  margin-left: auto;
-  font-size: 0.75rem;
-  transition: transform var(--transition-speed) ease;
-  color: var(--color-text-sub);
-}
-
-.filter-bar--open .filter-bar__arrow {
-  transform: rotate(180deg);
-}
-
-/* Panel trượt xuống */
-.filter-bar__panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
-}
-
-.filter-bar--open .filter-bar__panel {
-  max-height: 800px;
-}
-
-.filter-bar__form {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  padding: 1.25rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.filter-bar__group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.filter-bar__label {
-  font-size: 0.78rem;
-  font-weight: bold;
-  color: var(--color-text-sub);
-}
-
-.filter-bar__control {
-  padding: 0.5rem 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 4px;
-  font-size: 0.875rem;
-  width: 100%;
-  background-color: white;
-  color: var(--color-text-main);
-}
-
-.filter-bar__control:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: var(--focus-ring);
-}
-
-.filter-bar__price-range {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.filter-bar__price-range .filter-bar__control {
-  flex: 1;
-}
-
-.filter-bar__price-range span {
-  color: var(--color-text-sub);
-  flex-shrink: 0;
-  font-size: 0.8rem;
-}
-
-/* Nút actions chiếm full width cuối form */
-.filter-bar__actions {
-  grid-column: 1 / -1;
-  display: flex;
-  gap: 0.75rem;
-  justify-content: flex-end;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--color-border);
-}
-
-.filter-bar__btn-apply {
-  padding: 0.6rem 1.5rem;
-  background-color: var(--color-primary);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.filter-bar__btn-apply:hover {
-  filter: brightness(0.9);
-}
-
-.filter-bar__btn-reset {
-  padding: 0.6rem 1.25rem;
-  background-color: white;
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
-  border-radius: 4px;
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-
-.filter-bar__btn-reset:hover {
-  background-color: var(--color-primary);
-  color: white;
-  transition: all var(--transition-speed) ease;
-}
-
-@media (max-width: 768px) {
-  .filter-bar__form {
-    grid-template-columns: 1fr 1fr;
-    padding: 1rem;
-  }
-
-  .filter-bar__control {
-    font-size: 16px; /* Tránh zoom tự động trên iOS */
-  }
-}
-
-@media (max-width: 480px) {
-  .filter-bar__form {
+  .filter-panel__grid {
     grid-template-columns: 1fr;
   }
-
-  .filter-bar__actions {
-    flex-direction: column;
-  }
-}
-
-/* ==========================================================================
-   KHỐI 9: NÚT THÊM VÀO GIỎ HÀNG
-   ========================================================================== */
-.product-card__btn-cart,
-.btn-cart {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  width: 100%;
-  padding: 0.55rem 1rem;
-  margin-top: 0.25rem;
-  background-color: var(--color-secondary);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.875rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: filter var(--transition-speed) ease, transform 0.1s ease;
-}
-
-.btn-cart:hover:not(:disabled) {
-  filter: brightness(0.9);
-}
-
-.btn-cart--added {
-  background-color: #16a34a !important;
-  cursor: default;
-}
-
-/* ==========================================================================
-   KHỐI 10: BADGE GIỎ HÀNG TRÊN HEADER
-   ========================================================================== */
-.header__cart-wrapper {
-  position: relative;
-  display: inline-flex;
-}
-
-.header__cart-badge {
-  display: none;
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  min-width: 18px;
-  height: 18px;
-  padding: 0 4px;
-  background-color: #ef4444;
-  color: white;
-  font-size: 0.7rem;
-  font-weight: bold;
-  border-radius: 999px;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  pointer-events: none;
-}
-
-/* ==========================================================================
-   KHỐI 11: TOAST THÔNG BÁO
-   ========================================================================== */
-.cart-toast {
-  padding: 0.75rem 1.25rem;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: white;
-  background-color: #16a34a;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
-  max-width: 300px;
-}
-
-.cart-toast--warning {
-  background-color: #d97706;
-}
-
-.cart-toast--show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ==========================================================================
-   KHỐI 12: ĐẾM SỐ LƯỢNG KẾT QUẢ
-   ========================================================================== */
-.product-showroom__count {
-  font-size: 0.875rem;
-  color: var(--color-text-sub);
-  margin-bottom: 0.75rem;
 }

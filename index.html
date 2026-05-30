@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sàn giao dịch đồ điện tử cũ sinh viên - Mua bán điện thoại, laptop, phụ kiện cũ giá rẻ an toàn"
+    />
     <title>Sàn Giao Dịch Đồ Điện Tử Cũ Sinh Viên - Trang Chủ</title>
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/index.css" />
@@ -21,7 +25,11 @@
             class="header__search-input u-focus"
             placeholder="Tìm điện thoại, laptop, phụ kiện cũ..."
           />
-          <button type="submit" class="header__search-btn u-hover" aria-label="Tìm kiếm nhanh">
+          <button
+            type="submit"
+            class="header__search-btn u-hover"
+            aria-label="Tìm kiếm nhanh"
+          >
             🔍
           </button>
         </form>
@@ -29,11 +37,18 @@
 
       <div class="header__actions">
         <a href="#" class="header__action-link u-hover">Đăng ký / Đăng nhập</a>
-        <a href="#" class="header__cart-icon u-hover" aria-label="Xem giỏ hàng cá nhân">🛒</a>
+        <a
+          href="#"
+          class="header__cart-icon u-hover"
+          aria-label="Xem giỏ hàng cá nhân"
+          >🛒</a
+        >
       </div>
 
       <div class="header__cta">
-        <a href="pages/dang_tin.html" class="header__btn-post btn btn-secondary u-hover u-active">Đăng tin miễn phí</a>
+        <a href="pages/dang_tin.html" class="header__btn-post u-active"
+          >Đăng tin miễn phí</a
+        >
       </div>
     </header>
 
@@ -41,41 +56,53 @@
     <nav class="navigation" aria-label="Danh mục thiết bị công nghệ">
       <ul class="navigation__list navigation__list--level-1">
         <li class="navigation__item navigation__item--has-dropdown">
-          <a href="#productGrid" class="navigation__link" data-filter-cat="">Điện thoại</a>
+          <a href="index.html" class="navigation__link">Điện thoại</a>
           <ul class="navigation__list navigation__list--level-2">
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="iphone">iPhone</a>
+              <a href="index.html?cat=iphone" class="navigation__link"
+                >iPhone</a
+              >
             </li>
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="samsung">Samsung</a>
+              <a href="index.html?cat=samsung" class="navigation__link"
+                >Samsung</a
+              >
             </li>
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="xiaomi">Xiaomi</a>
+              <a href="index.html?cat=xiaomi" class="navigation__link"
+                >Xiaomi</a
+              >
             </li>
           </ul>
         </li>
         <li class="navigation__item navigation__item--has-dropdown">
-          <a href="#productGrid" class="navigation__link" data-filter-cat="">Laptop</a>
+          <a href="index.html" class="navigation__link">Laptop</a>
           <ul class="navigation__list navigation__list--level-2">
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="dell">Dell</a>
+              <a href="index.html?cat=dell" class="navigation__link">Dell</a>
             </li>
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="macbook">Macbook</a>
+              <a href="index.html?cat=macbook" class="navigation__link"
+                >Macbook</a
+              >
             </li>
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="asus">Asus</a>
+              <a href="index.html?cat=asus" class="navigation__link">Asus</a>
             </li>
           </ul>
         </li>
         <li class="navigation__item navigation__item--has-dropdown">
-          <a href="#productGrid" class="navigation__link" data-filter-cat="">Phụ kiện</a>
+          <a href="index.html" class="navigation__link">Phụ kiện</a>
           <ul class="navigation__list navigation__list--level-2">
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="tai-nghe">Tai nghe</a>
+              <a href="index.html?cat=tai-nghe" class="navigation__link"
+                >Tai nghe</a
+              >
             </li>
             <li class="navigation__item">
-              <a href="#productGrid" class="navigation__link nav-filter" data-filter-cat="chuot-ban-phim">Chuột &amp; Bàn phím</a>
+              <a href="index.html?cat=chuot-ban-phim" class="navigation__link"
+                >Chuột & Bàn phím</a
+              >
             </li>
           </ul>
         </li>
@@ -83,104 +110,123 @@
     </nav>
 
     <!-- HERO BANNER -->
-    <section class="hero-slideshow" aria-label="Banner">
-      <div class="hero-banner">
-        <h2>📱 Mua bán đồ điện tử cũ</h2>
-        <p>Kết nối sinh viên — Giao dịch an toàn — Giá hợp lý</p>
-        <a href="#productGrid" class="hero-banner__btn">Xem sản phẩm ngay</a>
-        <div class="hero-banner__stats">
-          <div class="hero-banner__stat">
-            <strong>100+</strong>
-            <span>Tin đăng</span>
-          </div>
-          <div class="hero-banner__stat">
-            <strong>50+</strong>
-            <span>Sinh viên</span>
-          </div>
-          <div class="hero-banner__stat">
-            <strong>3</strong>
-            <span>Danh mục</span>
-          </div>
+    <section class="hero-banner">
+      <h2>📱 Mua bán đồ điện tử cũ</h2>
+      <p>Kết nối sinh viên — Giao dịch an toàn — Giá hợp lý</p>
+      <a href="#productGrid" class="hero-banner__btn">Xem sản phẩm ngay</a>
+      <div class="hero-banner__stats">
+        <div class="hero-banner__stat">
+          <strong>100+</strong>
+          <span>Tin đăng</span>
+        </div>
+        <div class="hero-banner__stat">
+          <strong>50+</strong>
+          <span>Sinh viên</span>
+        </div>
+        <div class="hero-banner__stat">
+          <strong>3</strong>
+          <span>Danh mục</span>
         </div>
       </div>
     </section>
 
     <!-- MAIN LAYOUT -->
     <main class="main-layout">
-
-      <!-- BỘ LỌC NÂNG CAO -->
-      <div class="filter-bar" id="filterBar">
-        <button class="filter-bar__toggle" id="filterToggle" aria-expanded="false" aria-controls="filterPanel">
-          🔧 Bộ lọc nâng cao
-          <span class="filter-bar__arrow" aria-hidden="true">▼</span>
+      <!-- THANH BỘ LỌC -->
+      <div class="filter-bar">
+        <button class="filter-bar__toggle" id="filterToggle" type="button">
+          <span class="filter-bar__toggle-icon">▼</span>
+          Bộ lọc nâng cao
         </button>
-        <div class="filter-bar__panel" id="filterPanel" role="region" aria-label="Bộ lọc sản phẩm">
-          <div class="filter-bar__form">
+        <span class="result-count" id="resultCount"></span>
+        <select class="filter-bar__sort filter-panel__control" id="filterSort">
+          <option value="newest">Mới đăng nhất</option>
+          <option value="price-asc">Giá tăng dần</option>
+          <option value="price-desc">Giá giảm dần</option>
+        </select>
+      </div>
 
-            <div class="filter-bar__group">
-              <label class="filter-bar__label" for="filterCategory">Danh mục</label>
-              <select class="filter-bar__control" id="filterCategory">
-                <option value="">-- Tất cả --</option>
+      <!-- PANEL BỘ LỌC (trượt xuống khi bấm) -->
+      <div class="filter-panel" id="filterPanel">
+        <form id="filterForm" class="filter-panel__form">
+          <div class="filter-panel__grid">
+            <div class="filter-panel__group">
+              <label class="filter-panel__label" for="searchKeyword"
+                >Từ khóa</label
+              >
+              <input
+                type="search"
+                class="filter-panel__control"
+                id="searchKeyword"
+                placeholder="VD: iPhone, Dell, tai nghe..."
+              />
+            </div>
+            <div class="filter-panel__group">
+              <label class="filter-panel__label" for="filterCategory"
+                >Danh mục</label
+              >
+              <select class="filter-panel__control" id="filterCategory">
+                <option value="">Tất cả danh mục</option>
                 <option value="iphone">iPhone</option>
                 <option value="samsung">Samsung</option>
                 <option value="xiaomi">Xiaomi</option>
-                <option value="dell">Laptop Dell</option>
+                <option value="dell">Dell</option>
                 <option value="macbook">Macbook</option>
                 <option value="asus">Asus</option>
                 <option value="tai-nghe">Tai nghe</option>
                 <option value="chuot-ban-phim">Chuột &amp; Bàn phím</option>
               </select>
             </div>
-
-            <div class="filter-bar__group">
-              <label class="filter-bar__label" for="filterCondition">Tình trạng</label>
-              <select class="filter-bar__control" id="filterCondition">
-                <option value="all">-- Tất cả --</option>
-                <option value="likenew">Mới 99% (Like New)</option>
-                <option value="used">Cũ (Đã sử dụng)</option>
-              </select>
-            </div>
-
-            <div class="filter-bar__group">
-              <label class="filter-bar__label" for="filterLocation">Khu vực</label>
-              <select class="filter-bar__control" id="filterLocation">
-                <option value="">-- Tất cả --</option>
-                <option value="ktx">Ký túc xá</option>
-                <option value="gan-truong">Gần trường</option>
-              </select>
-            </div>
-
-            <div class="filter-bar__group">
-              <label class="filter-bar__label">Khoảng giá (VND)</label>
-              <div class="filter-bar__price-range">
-                <input type="number" class="filter-bar__control" id="filterMinPrice" placeholder="Từ" min="0" step="500000">
+            <div class="filter-panel__group">
+              <label class="filter-panel__label">Khoảng giá (VNĐ)</label>
+              <div class="filter-panel__price-range">
+                <input
+                  type="number"
+                  class="filter-panel__control"
+                  id="filterPriceMin"
+                  placeholder="Từ"
+                />
                 <span>—</span>
-                <input type="number" class="filter-bar__control" id="filterMaxPrice" placeholder="Đến" min="0" step="500000">
+                <input
+                  type="number"
+                  class="filter-panel__control"
+                  id="filterPriceMax"
+                  placeholder="Đến"
+                />
               </div>
             </div>
-
-            <div class="filter-bar__group">
-              <label class="filter-bar__label" for="filterSort">Sắp xếp theo</label>
-              <select class="filter-bar__control" id="filterSort">
-                <option value="newest">Mới nhất</option>
-                <option value="price-asc">Giá tăng dần</option>
-                <option value="price-desc">Giá giảm dần</option>
+            <div class="filter-panel__group">
+              <label class="filter-panel__label" for="filterCondition"
+                >Tình trạng</label
+              >
+              <select class="filter-panel__control" id="filterCondition">
+                <option value="all">Tất cả</option>
+                <option value="likenew">Mới 99% (Like New)</option>
+                <option value="used">Đã qua sử dụng</option>
               </select>
             </div>
-
-            <div class="filter-bar__actions">
-              <button class="filter-bar__btn-reset" id="filterReset" type="button">↺ Đặt lại</button>
-              <button class="filter-bar__btn-apply" id="filterApply" type="button">🔍 Áp dụng</button>
-            </div>
-
           </div>
-        </div>
+          <div class="filter-panel__actions">
+            <button
+              type="submit"
+              class="filter-panel__btn-apply btn u-hover u-active"
+            >
+              Áp dụng
+            </button>
+            <button
+              type="reset"
+              class="filter-panel__btn-reset btn u-hover"
+              id="btnReset"
+            >
+              Xóa bộ lọc
+            </button>
+          </div>
+        </form>
       </div>
-      <!-- /BỘ LỌC NÂNG CAO -->
 
+      <!-- DANH SÁCH SẢN PHẨM -->
       <section class="product-showroom">
         <h2 class="product-showroom__title">Tin đăng mới nhất từ sinh viên</h2>
-        <p class="product-showroom__count" id="productCount"></p>
         <div class="product-showroom__grid" id="productGrid"></div>
       </section>
     </main>
@@ -190,19 +236,25 @@
       <div class="main-footer__content">
         <div class="main-footer__info">
           <h3>Sàn Đồ Điện Tử Cũ Sinh Viên - Nhóm 17</h3>
-          <p>Kênh trung gian kết nối trao đổi thiết bị công nghệ an toàn trong khuôn viên trường đại học.</p>
+          <p>
+            Kênh trung gian kết nối trao đổi thiết bị công nghệ an toàn trong
+            khuôn viên trường đại học.
+          </p>
         </div>
         <div class="main-footer__links">
-          <a href="#" class="main-footer__link u-hover">Quy định chung & Hướng dẫn giao dịch an toàn</a>
+          <a href="#" class="main-footer__link u-hover"
+            >Quy định chung & Hướng dẫn giao dịch an toàn</a
+          >
         </div>
       </div>
       <div class="main-footer__copyright">
-        <p>&copy; 2026 Sàn Đồ Cũ CNTT. Đồ án Thiết kế và Lập trình Web cơ bản.</p>
+        <p>
+          &copy; 2026 Sàn Đồ Cũ CNTT. Đồ án Thiết kế và Lập trình Web cơ bản.
+        </p>
       </div>
     </footer>
 
     <script src="js/data.js"></script>
-    <script src="js/cart.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
