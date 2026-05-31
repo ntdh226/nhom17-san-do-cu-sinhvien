@@ -169,6 +169,8 @@
 /* --- Navigation (Menu 2 cấp) --- */
 .navigation {
   background-color: var(--color-primary);
+  overflow: visible;  
+  position: relative;
 }
 
 .navigation__list--level-1 {
@@ -319,6 +321,7 @@
   width: auto;
   min-width: 160px;
   flex-shrink: 0;
+   margin-left: auto;
 }
 
 .result-count {
