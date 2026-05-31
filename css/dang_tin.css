@@ -90,6 +90,18 @@ textarea.form-control {
   height: 1rem;
 }
 
+.form-control--error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.form-error {
+  font-size: 0.8rem;
+  color: var(--color-error);
+  margin-top: 0.25rem;
+  display: block;
+}
+
 /* Nút submit */
 .btn-submit {
   width: 100%;
