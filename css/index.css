@@ -202,12 +202,11 @@
   background-color: var(--color-background);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-hover);
-  z-index: 100;
+  z-index: 999;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .navigation__list--level-2 .navigation__link {
@@ -237,7 +236,6 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translateY(0);
 }
 
 /* ==========================================================================
@@ -654,6 +652,7 @@
 
   .filter-bar__sort {
     width: 100%;
+    max-width: 200px;
     order: 3;
   }
 
